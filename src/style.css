@@ -19,21 +19,45 @@ body {
   background-color: fuchsia;
 }
 
-.app-js-div {
-  background: #F2EEEA;
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: 8vh 92vh;
-}
+
 
 .test {
   background: rgba(97, 39, 17, 0.548);
+  background: #3f281f;
   /* grid-row: auto */
   filter: grayscale(80%);
-  color: rgba(197, 142, 38, 0.5);
+  background: #577957;
   color: #313131;
+  background: #435c43;
+  background: #8f97a7;
+  background: #6f7686;
+  background: #b1bbd4;
+  background: #68867a;
+  background: #8fb6a6;
+  background: #8a926f;
+  background: #d5e2a8;
+  background: #9ea38e;  
+  background: #6e5252;
+  background: #b99898;
+  background: #d19999;
+  background: #d5e2a8;
+  background: #9ea38e;
+
+  background: #73a373;
+  background: #73a373;
+  background: #73a373;
+  background: #73a373;
+  background: #73a373;
+  background: #73a373;
+  background: rgba(188, 255, 87, 0.5);
+
+
+
+
+
+
+
+
 }
 
 a {

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  width: 100vw;
+  height: 100vh;
+  background-color: fuchsia;
+}
+
+
+
+.test {
+  background: rgba(97, 39, 17, 0.548);
+  background: #3f281f;
+  /* grid-row: auto */
+  filter: grayscale(80%);
+  background: #577957;
+  color: #313131;
+  background: #435c43;
+  background: #8f97a7;
+  background: #6f7686;
+  background: #b1bbd4;
+  background: #68867a;
+  background: #8fb6a6;
+  background: #8a926f;
+  background: #d5e2a8;
+  background: #9ea38e;  
+  background: #6e5252;
+  background: #b99898;
+  background: #d19999;
+  background: #d5e2a8;
+  background: #9ea38e;
+
+  background: #73a373;
+  background: #73a373;
+  background: #73a373;
+  background: #73a373;
+  background: #73a373;
+  background: #73a373;
+  background: rgba(188, 255, 87, 0.5);
+
+
+
+
+
+
+
+
+}
+
+a {
+  color: inherit;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
