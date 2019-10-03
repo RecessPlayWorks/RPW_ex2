@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import MailForm from '../MailForm';
 
 
 const StyledContact = styled.main`
@@ -17,7 +18,7 @@ const Contact = () => {
   return (
     <StyledContact>
       <section className="section-right">
-        <h1>Contact Section Right</h1>
+        <MailForm/>
       </section>
       <section className="section-left-bot">
       <h1>Contact Section Left</h1>
