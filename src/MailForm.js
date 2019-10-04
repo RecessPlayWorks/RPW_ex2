@@ -1,8 +1,6 @@
-import React, { useState,Component } from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
-
-import axios from 'axios';
-import { async } from "q";
+/* AS A FUNCTIONAL COMPONENT*/
 
 const StyledMailForm = styled.form`
     background: grey;
@@ -39,59 +37,73 @@ const StyledMailForm = styled.form`
 `;
 
 
-    const MailForm =  () => {
-        const [email, setEmail] = useState("defaultEmail")
-        const [name, setName] = useState("defaultname")
-        const [message, setMessage] = useState("defaultmessage")
-        
-        const submitHandler=  (e) => {
-            e.preventDefault();
+    // const MailForm =  () => {
+class MailForm extends Component{        
+constructor(props) {
+    super(props);
+    this.state = {
+        email: "default@email.io",
+        name: "defaultName",
+        message: "defaultMessage"
+    }
+    this.changeHandler = this.changeHandler.bind(this);
+    this.submitHandler = this.submitHandler.bind(this);
+}
+
+    changeHandler(e) {
+    this.setState({[e.target.name]: e.target.value})
+    }
+    submitHandler(e) {
+        const {email, name, message} = this.state;
+
+        e.preventDefault();
             console.log(`
             {name: ${name},
             email: ${email},
             msg: ${message}}`) 
-            
-            // const form = await axios.post('/api/form', {
-            //     name,
-            //     email,
-            //     message
-            // })
+            console.log("state:",this.state)
     }
 
-       
-        return (
-            <StyledMailForm onSubmit={submitHandler} >
-                <fieldset>
+       render() {
+           const {email, name, message} = this.state;
+           return (
+               <StyledMailForm onSubmit={this.submitHandler} >
+            <fieldset>
                 <legend>Mail Form</legend>
                 <label htmlFor="name">name</label>
                 <input
-                onChange={e=>setName(e.target.value)}
-                className="name"
+                onChange={this.changeHandler}
+                name="name"
                 type="text"
                 placeholder="name"
                 value={name}
                 />
                 <label htmlFor="email">email</label>
                 <input
-                onChange={e=>setEmail(e.target.value)}
+                onChange={this.changeHandler}
                 className="email"
+                name="email"
                 type="email"
                 placeholder="email"
                 value={email}
                 />
                 <label htmlFor="message">message</label>
                 <input
-                onChange={e=>setMessage(e.target.value)}
+                onChange={this.changeHandler}
                 className="message"
+                name="message"
                 type="textarea"
                 placeholder="message"
                 value={message}
                 />
                 </fieldset>
                 <button type="submit">Send Email</button>
+
+                <div> State: {this.state.name}</div>
             </StyledMailForm>
         )
     }
+}
 
 
 export default MailForm;

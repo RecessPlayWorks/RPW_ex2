@@ -1,17 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser');
-const exHBars = require('express-handlebars');
+// const exHBars = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
-
-
-
 const app = express();
-
-// view engine setup
-// app.engine('handlebars', exHBars());
-// app.set('view engine', 'handlebars');
 
 // STATIC FOLDER
 app.use('/dist', express.static(path.join(__dirname, 'dist')))
@@ -23,10 +16,13 @@ app.use(bodyParser.json())
 
 
 /* route */
-app.get('/', (req, res) => {
-    console.log('res: ', res.status)
+// app.get('/', (req, res) => {
+    // console.log('res from index.js: n/', res.status)
     // res.status
-})
+// })
+// app.post('/send', (req, res) =>{
+//    console.log("body: ", req.body);
+// })
 
 app.use(express.static('dist'))
 
